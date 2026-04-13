@@ -1,5 +1,4 @@
-[README.md](https://github.com/user-attachments/files/26668659/README.md)
-ELAMITECH
+BELAMITECH
 
 Web para consultoría tecnológica enfocada en optimización, minimalismo y seguridad.
 

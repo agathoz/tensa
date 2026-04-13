@@ -21,11 +21,3 @@ En la instalación inicial, existe un usuario administrador por defecto cargado 
 - **Contraseña:** password
  *(Asegúrate de cambiarla tan pronto inicies sesión en producción).*
 
-## Escalabilidad e Implementación con Cloudflare Tunnels
-Para escalar horizontalmente (montando el contenedor en múltiples servidores y balanceando la carga) y protegerlo directamente desde el CDN sin exponer puertos en tu máquina, usamos Cloudflare Tunnels:
-
-1. Instala el demonio `cloudflared` en la máquina host donde corre Docker.
-2. Autentica tu cuenta: `cloudflared tunnel login`.
-3. Crea un túnel: `cloudflared tunnel create belamitech-tunnel`.
-4. Enruta el tráfico mapeando `http://localhost:8080` a tu subdominio (ej: `app.belamitech.com`) en el Dashboard de Zero Trust de Cloudflare.
-5. Ejecuta el túnel localmente de forma segura: `cloudflared tunnel run belamitech-tunnel`.
